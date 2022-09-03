@@ -310,7 +310,6 @@ class NiFiClientFactorySpec extends Specification {
     }
     def setupTmpDir(String tmpDirPath = "target/tmp/") {
         File tmpDir = new File(tmpDirPath)
-        tmpDir.mkdirs()
         setFilePermissions(tmpDir, [PosixFilePermission.OWNER_READ, PosixFilePermission.OWNER_WRITE, PosixFilePermission.OWNER_EXECUTE,
                                     PosixFilePermission.GROUP_READ, PosixFilePermission.GROUP_WRITE, PosixFilePermission.GROUP_EXECUTE,
                                     PosixFilePermission.OTHERS_READ, PosixFilePermission.OTHERS_WRITE, PosixFilePermission.OTHERS_EXECUTE])
